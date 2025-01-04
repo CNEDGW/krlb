@@ -1,0 +1,35 @@
+[
+  {
+    "kernelSource": {
+      "name": "fogos_ksu_krl",
+      "repo": "https://github.com/Motorola-SM6375-Devs/android_kernel_motorola_sm6375",
+      "branch": "fourteen",
+      "device": "fogos",
+      "defconfig": "vendor/fogos_defconfig"
+    },
+    "toolchains": [
+      {
+        "name": "proton-clang",
+        "repo": "https://github.com/kdrag0n/proton-clang",
+        "branch": "master",
+        "binaryEnv": ["./bin"]
+      }
+    ],
+    "enableCcache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "clang",
+      "externalCommands": {
+        "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-",
+        "CLANG_TRIPLE": "aarch64-linux-gnu-"
+      }
+    },
+    "AnyKernel3": {
+      "use": false,
+      "release": true
+    },
+    "enableKernelSU": true,
+    "enableLXC": false
+  }
+]
