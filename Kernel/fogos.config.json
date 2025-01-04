@@ -1,11 +1,11 @@
 [
   {
     "kernelSource": {
-      "name": "Xiaomi9KernelPoweredBySeparate",
-      "repo": "https://github.com/Separatee/AllinOneKernel",
-      "branch": "main",
-      "device": "cepheus",
-      "defconfig": "cepheus_defconfig"
+      "name": "fogos_ksu_krl",
+      "repo": "https://github.com/Motorola-SM6375-Devs/android_kernel_motorola_sm6375",
+      "branch": "fourteen",
+      "device": "fogos",
+      "defconfig": "vendor/fogos_defconfig"
     },
     "toolchains": [
       {
@@ -29,7 +29,7 @@
       "use": false,
       "release": true
     },
-    "enableKernelSU": false,
+    "enableKernelSU": true,
     "enableLXC": false
   }
 ]
